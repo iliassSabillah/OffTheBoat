@@ -1,11 +1,11 @@
 import {combineReducers} from 'redux';
-import info from './infoReducer';
+import checklistReducer from './checkList';
 
 
 import { routerReducer } from 'react-router-redux';
 
 const rootReducer = combineReducers({
-	info,
+	checklistReducer,
 	routing: routerReducer
 });
 
