@@ -1,11 +1,16 @@
 import {combineReducers} from 'redux';
-import info from './infoReducer';
+import checklistReducer from './checkList';
+import jobReducer from './jobReducer';
+import housingReducer from './housingReducer';
 
 
 import { routerReducer } from 'react-router-redux';
 
 const rootReducer = combineReducers({
-	info,
+	checklistReducer,
+	housingReducer,
+	trainingReducer,
+	jobReducer,
 	routing: routerReducer
 });
 
