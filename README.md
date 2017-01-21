@@ -2,7 +2,7 @@
 
 **OffTheBoat** is a ....
 
-Created by: **Iliass, Quan, Danial**
+Created by: **Iliass, Quan, Daniel**
 
 Time spent: **...** hours spent in total
 
