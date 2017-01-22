@@ -2,3 +2,4 @@ node_modules/
 .idea
 .idea/modules.xml
 .idea/workspace.xml
+config.json
