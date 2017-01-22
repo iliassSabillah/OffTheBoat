@@ -3,23 +3,15 @@ import ReactDOM from "react-dom";
 import $ from "jquery";
 
 const Maps = React.createClass({
+	getInitialState() {
+		return {
+			name: "",
+			zip: null,
+			lat: null,
+			lng: null,
+		};
+	},
 	componentDidMount() {
-
-		// function resetValue() {
-		// 	$('.first').val("");
-		// 	$('.second').val("");
-		// }
-
-		// function setsearchinput() {
-		// 	if($('.hide')){ 
-		// 		$('.second').addClass('hide');
-		// 		$('.first').attr('placeholder', 'search');
-		// 	}
-		// 	else {
-		// 		$('.first').attr('placeholder', 'search');
-		// 	}
-
-		// }
 
 		$('select').change(function() {
 		  let mode = $(this).val();
@@ -73,26 +65,6 @@ const Maps = React.createClass({
 		  $('iframe').attr('src', url + mode +'?key='+ key +param);
 		});
 
-		//get location using zipcode
-		// let geocoder = new google.maps.Geocoder();
-		// let zipcode= '11361'
-		// function codeAddress(zipcode) {
-		//
-		//     geocoder.geocode({
-		//         'address': zipcode
-		//     }, function (results, status) {
-		//
-		//         if (status == google.maps.GeocoderStatus.OK) {
-		//
-		//             lat = results[0].geometry.location.lat();
-		//             lng = results[0].geometry.location.lng();
-		//             console.log(lat,lng)
-		//             return {lat:lat,lng:lng}
-		//         } else {
-		//             alert("Geocode was not successful for the following reason: " + status);
-		//         }
-		//     });
-		// }
 	},
 
 	render() {
