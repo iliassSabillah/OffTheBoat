@@ -3,17 +3,16 @@ import {Route, IndexRoute} from 'react-router';
 import App from '../components/App';
 import HomePage from '../components/home/HomePage';
 import AboutPage from '../components/about/AboutPage';
-import CheckList from '../components/checklist/CheckList';
-import {onUsersEnter} from './route_data';
-import AllSteps from '../components/steps/AllSteps';
+import CheckListContainer from '../components/checklist/CheckListContainer';
+import {onCheckList} from './route_data';
 import StepContainer from '../components/steps/StepContainer';
 
 
 export default (
 	<Route path="/" component={App}>
 		<IndexRoute component ={HomePage}/>
-		<Route path="checklist" component ={CheckList} />
-		<Route path ="steps" component={StepContainer}/>
-		<Route path ="about" component={AboutPage}/>
+		<Route path="checklist" component ={CheckListContainer} onEnter={onCheckList} />
+		<Route path ="/steps" component={StepContainer}/>
+		<Route path ="/about" component={AboutPage}/>
 	</Route>
 );

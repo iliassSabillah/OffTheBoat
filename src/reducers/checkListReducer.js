@@ -2,12 +2,12 @@
 import * as types from '../actions/actionTypes';
 
 
-const INITIAL_STATE = {job: false, apartment: false, documentation: false, governmentServices: false, location: null};
+const INITIAL_STATE = {jobs: false, housing: false, documents: false, services: false, zip: null};
 
 export default function checklistReducer(state= INITIAL_STATE, action){
 	switch(action.type){
-		case "UPDATE":
-			return Object.assign({}, action.payload);
+		case "CHECKLIST":
+			return Object.assign({},state, action.payload);
 		default:
 			return state;
 	}
