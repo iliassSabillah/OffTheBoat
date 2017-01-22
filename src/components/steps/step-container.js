@@ -11,7 +11,9 @@ import AllSteps from './allsteps-page';
 const mapStateToProps = (state) => ({
   housing: state.housingReducer,
 	training: state.trainingReducer,
-	job: state.jobReducer
+	job: state.jobReducer,
+  checklist: state.checklistReducer,
+  docs: state.documentationReducer
 });
 
 const mapDispatchToProps= (dispatch) => ({

@@ -2,12 +2,19 @@ import React from 'react';
 import Step from './step';
 
 const AllSteps = React.createClass({
+  componentWillMount() {
+    console.log('ACTION FIRED!!!')
+    this.props.actions.fetchNycId()
+    this.props.actions.fetchJobs()
+    this.props.actions.fetchHousing()
+
+  },
   render() {
       return(
         <ul className="collapsible popout" data-collapsible="accordion">
-          <Step nycId={this.props.actions} text={'Documents'} />
+          <Step data={this.props.docs} text={'Documents'} />
           <Step  text={'Government Services'} />
-          <Step jobs={this.props.actions} text={'Jobs'} />
+          <Step data={this.props.jobs} jobs={this.props.actions} text={'Jobs'} />
           <Step housing={this.props.actions} text={'Housing'} />
         </ul>
       );

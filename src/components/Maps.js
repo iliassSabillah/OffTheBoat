@@ -22,7 +22,7 @@ const Maps = React.createClass({
 	// },
 
 	render() {
-		console.log('PROPS IN MAPS:', this.props)
+		console.log(this.props.docs)
 		return (
 			 <iframe
 			  id="map"

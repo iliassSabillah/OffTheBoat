@@ -14,7 +14,7 @@ export default (
 		<Route component ={HomePage}>
 			<IndexRoute  component ={CheckList} />
 		</Route>
-		<Route path ="steps" component={StepContainer}/>
+		<Route path ="steps" component={StepContainer} />
 		<Route path ="about" component={AboutPage}/>
 	</Route>
 );

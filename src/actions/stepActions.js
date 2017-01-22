@@ -12,7 +12,6 @@ export function fetchNycId() {
 		  "$$app_token" : "jKmKF012XCjlNMiFkklxUusmF"
 		},
 			success: function(data) {
-				console.log('data',data)
 			}
 	})
 
@@ -34,13 +33,13 @@ export function fetchJobs() {
 	const request = $.ajax({
 		url: "https://c4q-dot-searchbertha-hrd.appspot.com/_ah/api/search/v1/zipcodes/" + zipCode + "/programs?api_key=" + apiKey + "&serviceTag=" + serviceTag + "&attributeTag=" + attrTag,
 		success: function(data) {
-				console.log('data', data)
+				console.log('data', data.programs)
 			}
 		})
 
 	return (dispatch)=>{
 		request.then((data)=>{
-			dispatch({type: 'FETCH_JOB', payload: data});
+			dispatch({type: 'FETCH_JOB', payload: data.programs});
 			// console.log('data dispatch',data)
 		});
 	};
@@ -61,10 +60,9 @@ export function fetchHousing() {
 			}
 		})
 
-	return (dispatch)=>{
-		request.then((data)=>{
-			dispatch({type: 'FETCH_HOUSING', payload: data});
-			// console.log('data dispatch',data)
+	return (dispatch) => {
+		request.then((data) => {
+			dispatch({type: 'FETCH_HOUSING', payload: data.programs});
 		});
 	};
 }
