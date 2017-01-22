@@ -47,7 +47,7 @@ const Header = (props)=> {
 			</nav>
 			<div className="sectionNav">
 				<ul className="nav nav-pills center">
-					<li><IndexLink to="/">Info</IndexLink></li>
+					<li><IndexLink to="/">CheckList</IndexLink></li>
 				</ul>
 			</div>
 		</div>
