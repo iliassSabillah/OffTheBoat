@@ -20,14 +20,16 @@ const Maps = React.createClass({
 	// 	  	);
 
 	// },
+
 	render() {
+		console.log('PROPS IN MAPS:', this.props)
 		return (
 			 <iframe
 			  id="map"
 			  width="600"
 			  height="450"
-			  frameborder="0" style="border:0"
-			  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBR3YnmH_sCLgjpiBnGsIb8YALCQvMbhRQ&q=Coalition+for+Queens" allowfullscreen>
+			  frameBorder="0"
+			  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBR3YnmH_sCLgjpiBnGsIb8YALCQvMbhRQ&q=Coalition+for+Queens" allowFullScreen>
 			</iframe>
 		);
 	}
