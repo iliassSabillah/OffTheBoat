@@ -2,6 +2,13 @@
 import React, {PropTypes, Component}   from 'react';
 
 class CheckList extends React.Component{
+	handleChange(e) {
+		if(e.target.checked) {
+			!e.target.checked
+		} else {
+			e.target.checked
+		}
+	}
 
 	render() {
 		return (
@@ -9,24 +16,20 @@ class CheckList extends React.Component{
 				<h2>Hi! Welcome To The United States.</h2>
 				<form >
 					<p>
-						<input type="checkbox" className="filled-in" id="filled-in-box" />
+						<input type="checkbox" name='documents' className="filled-in documents" id="filled-in-box" onChange={this.handleChange} />
 						<label htmlFor="filled-in-box">documents</label>
 					</p>
 					<p>
-						<input type="checkbox" className="filled-in" id="filled-in-box"  />
-						<label htmlFor="filled-in-box">Government Services</label>
+						<input type="checkbox" name='services' className="filled-in services" id="filled-in-box-2" onChange={this.handleChange}/>
+						<label htmlFor="filled-in-box-2">Government Services</label>
 					</p>
 					<p>
-						<input type="checkbox" className="filled-in" id="filled-in-box"  />
-						<label htmlFor="filled-in-box">Jobs</label>
+						<input type="checkbox" name='jobs' className="filled-in jobs" id="filled-in-box-3" onChange={this.handleChange} />
+						<label htmlFor="filled-in-box-3">Jobs</label>
 					</p>
 					<p>
-						<input type="checkbox" className="filled-in" id="filled-in-box"  />
-						<label htmlFor="filled-in-box">Housing</label>
-					</p>
-					<p>
-						<input type="checkbox" className="filled-in" id="filled-in-box"  />
-						<label htmlFor="filled-in-box">Housing</label>
+						<input type="checkbox" name='housing' className="filled-in housing" id="filled-in-box-4" onChange={this.handleChange} />
+						<label htmlFor="filled-in-box-4">Housing</label>
 					</p>
 				</form>
 				<div className="row">

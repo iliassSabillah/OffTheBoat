@@ -2,7 +2,7 @@
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import * as infoActions from '../../actions/infoActions';
+import * as stepActions from '../../actions/stepActions';
 
 
 class HomePage extends React.Component {
@@ -24,8 +24,7 @@ HomePage.propTypes = {
 const mapStateToProps= (state,ownProps)=>({state: state});
 
 const mapDispatchToProps=(dispatch)=>({
-	actions: bindActionCreators({infoActions}, dispatch)
+	actions: bindActionCreators({stepActions}, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomePage);
-
