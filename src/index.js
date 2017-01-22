@@ -9,7 +9,7 @@ import configureStore from './store/configureStore';
 
 import './styles/styles.css'; //Webpack can import CSS files too
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import {fetchUser} from './actions/infoActions';
+import {fetchUser} from './actions/stepActions';
 
 
 const store = configureStore();
@@ -27,5 +27,3 @@ render (
 );
 
 // store.dispatch(fetchUser());
-
-

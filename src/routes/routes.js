@@ -6,6 +6,7 @@ import AboutPage from '../components/about/AboutPage';
 import CheckList from '../components/checklist/CheckList';
 import {onUsersEnter} from './route_data';
 import AllSteps from '../components/steps/allsteps-page';
+import StepContainer from '../components/steps/step-container';
 
 
 export default (
@@ -13,7 +14,7 @@ export default (
 		<Route component ={HomePage}>
 			<IndexRoute  component ={CheckList} />
 		</Route>
-		<Route path ="steps" component={AllSteps}/>
+		<Route path ="steps" component={StepContainer}/>
 		<Route path ="about" component={AboutPage}/>
 	</Route>
 );
