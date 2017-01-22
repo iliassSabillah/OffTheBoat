@@ -2,14 +2,15 @@
 import React, {PropTypes, Component}   from 'react';
 
 class CheckList extends React.Component{
+
 	handleChange(e) {
 		if(e.target.checked) {
 			!e.target.checked
+
 		} else {
 			e.target.checked
 		}
 	}
-
 	render() {
 		return (
 			<div id="info" className="contact-form col-md-3">
