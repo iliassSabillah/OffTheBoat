@@ -12,9 +12,9 @@ const Maps = React.createClass({
 		};
 	},
 	// componentDidMount() {
-		
+
 	// 	  // $('iframe').attr('src', url + mode +'?key='+ key +param);
-	// 	  $('iframe').attr('src', 
+	// 	  $('iframe').attr('src',
 	// 	  	"https://www.google.com/maps/embed/v1/search?key=AIzaSyDbJUsdZAQ7Zlsa3L9Vdu1pM4E__7kZZDc&q=C4Q"
 	// 	  	// url + mode +'?key='+ key +param
 	// 	  	);
@@ -22,6 +22,7 @@ const Maps = React.createClass({
 	// },
 
 	render() {
+		console.log(this.props.docs)
 		return (
 			 <iframe
 			  id="map"
