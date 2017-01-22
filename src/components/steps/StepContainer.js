@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import {browserHistory} from 'react-router';
 import {bindActionCreators} from 'redux';
 import * as stepActions from '../../actions/stepActions';
-import AllSteps from './allsteps-page';
+import AllSteps from './AllSteps';
 
 
 const mapStateToProps = (state) => ({

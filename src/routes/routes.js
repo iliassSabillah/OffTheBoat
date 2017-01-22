@@ -5,8 +5,8 @@ import HomePage from '../components/home/HomePage';
 import AboutPage from '../components/about/AboutPage';
 import CheckList from '../components/checklist/CheckList';
 import {onUsersEnter} from './route_data';
-import AllSteps from '../components/steps/allsteps-page';
-import StepContainer from '../components/steps/step-container';
+import AllSteps from '../components/steps/AllSteps';
+import StepContainer from '../components/steps/StepContainer';
 
 
 export default (

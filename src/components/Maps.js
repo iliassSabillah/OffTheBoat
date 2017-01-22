@@ -23,15 +23,17 @@ const Maps = React.createClass({
 
 	render() {
 		return (
-			<iframe
-				id="map"
-				width="600"
-				height="450"
-				frameBorder="0"
-				src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBR3YnmH_sCLgjpiBnGsIb8YALCQvMbhRQ&q=Coalition+for+Queens" allowFullScreen>
+
+			 <iframe
+			  id="map"
+			  width="600"
+			  height="450"
+			  frameBorder="0"
+			  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBR3YnmH_sCLgjpiBnGsIb8YALCQvMbhRQ&q=Coalition+for+Queens" allowFullScreen>
 			</iframe>
 		);
 	}
 });
 
 export default Maps;
+

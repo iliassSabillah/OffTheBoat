@@ -1,8 +1,8 @@
 //This component handles the Info section
 import React, {PropTypes, Component}   from 'react';
+import {Link} from 'react-router';
 
 class CheckList extends React.Component{
-
 	handleChange(e) {
 		if(e.target.checked) {
 			!e.target.checked
@@ -11,6 +11,7 @@ class CheckList extends React.Component{
 			e.target.checked
 		}
 	}
+
 	render() {
 		return (
 			<div id="info" className="contact-form col-md-3">
@@ -38,11 +39,12 @@ class CheckList extends React.Component{
 						<div className="row">
 							<div className="input-field col s12">
 								<input id="email" type="email" className="validate"/>
-									<label htmlFor="email" data-error="wrong" data-success="right">Email</label>
+									<label htmlFor="email" data-error="wrong" data-success="right">Zip Code</label>
 							</div>
 						</div>
 					</form>
 				</div>
+				<button><Link to="/steps">Next</Link></button>
 			</div>
 		);
 	}

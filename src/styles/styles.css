@@ -8,7 +8,10 @@
 
 }
 
+.homeImage {
+	width:100%;
+}
 
-
-
-
+.title {
+	position: absolute;
+}

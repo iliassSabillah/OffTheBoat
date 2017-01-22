@@ -1,5 +1,5 @@
 import React from 'react';
-import Step from './step';
+import Step from './Step';
 
 const AllSteps = React.createClass({
   render() {
