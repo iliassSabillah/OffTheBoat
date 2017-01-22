@@ -5,6 +5,7 @@ import HomePage from '../components/home/HomePage';
 import AboutPage from '../components/about/AboutPage';
 import InfoContainer from '../components/info/InfoContainer';
 import {onUsersEnter} from './route_data';
+import AllSteps from '../components/steps/allsteps-page';
 
 
 export default (
@@ -12,6 +13,7 @@ export default (
 		<Route component ={HomePage}>
 			<IndexRoute  component ={InfoContainer} />
 		</Route>
+		<Route path ="steps" component={AllSteps}/>
 		<Route path ="about" component={AboutPage}/>
 	</Route>
 );
