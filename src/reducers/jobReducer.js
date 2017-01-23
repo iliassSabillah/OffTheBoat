@@ -16,6 +16,7 @@ export default function jobReducer(state= INITIAL_STATE, action){
 					website: job.website_url,
 					description: job.description,
 					distance: job.distance,
+					phone: job.offices[0].phone_number
 				}
 			}));
 		default:

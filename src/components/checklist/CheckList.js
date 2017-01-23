@@ -33,8 +33,25 @@ class CheckList extends Component {
 		// const { handleSubmit } = this.props;
 		return (
 			<div id="info" className="contact-form col-md-3">
-				<h2>Hi! Welcome To The United States.</h2>
-				<CheckListForm onSubmit={this.props.handleSubmit} />
+				<h2>Hey! How may we help you today?</h2>
+				<form >
+					<p>
+						<input type="checkbox" name='documents' id="filled-in-box" onChange={this.handleChange} />
+						<label htmlFor="filled-in-box"><span>Documents</span></label>
+					</p>
+					<p>
+						<input type="checkbox" name='services' className="services" id="filled-in-box-2" onChange={this.handleChange}/>
+						<label htmlFor="filled-in-box-2"><span>Government Services</span></label>
+					</p>
+					<p>
+						<input type="checkbox" name='jobs' className="jobs" id="filled-in-box-3" onChange={this.handleChange} />
+						<label htmlFor="filled-in-box-3"><span>Jobs</span></label>
+					</p>
+					<p>
+						<input type="checkbox" name='housing' className="housing" id="filled-in-box-4" onChange={this.handleChange} />
+						<label htmlFor="filled-in-box-4"><span>Housing</span></label>
+					</p>
+				</form>
 				<div className="row">
 					<form className="col s12">
 						<div className="row">

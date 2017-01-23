@@ -16,7 +16,8 @@ export default function housingReducer(state= INITIAL_STATE, action){
 				email: housing.connection_email,
 				website: housing.website_url,
 				description: housing.description,
-				distance: housing.distance
+				distance: housing.distance,
+				phone: housing.offices[0].phone_number
 			}
 		}));
 		default:

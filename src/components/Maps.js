@@ -22,7 +22,6 @@ const Maps = React.createClass({
 	// },
 
 	render() {
-		console.log(this.props.docs)
 		return (
 
 			 <iframe
