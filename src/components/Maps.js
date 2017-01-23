@@ -24,6 +24,7 @@ const Maps = React.createClass({
 	render() {
 		console.log(this.props.docs)
 		return (
+
 			 <iframe
 			  id="map"
 			  width="600"
@@ -36,3 +37,4 @@ const Maps = React.createClass({
 });
 
 export default Maps;
+

@@ -5,15 +5,15 @@ import {connect} from 'react-redux';
 import {browserHistory} from 'react-router';
 import {bindActionCreators} from 'redux';
 import * as stepActions from '../../actions/stepActions';
-import AllSteps from './allsteps-page';
+import AllSteps from './AllSteps';
 
 
 const mapStateToProps = (state) => ({
-  housing: state.housingReducer,
+	housing: state.housingReducer,
 	training: state.trainingReducer,
 	job: state.jobReducer,
-  checklist: state.checklistReducer,
-  docs: state.documentationReducer
+	checklist: state.checklistReducer,
+	docs: state.documentationReducer
 });
 
 const mapDispatchToProps= (dispatch) => ({
