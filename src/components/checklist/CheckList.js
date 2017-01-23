@@ -1,27 +1,39 @@
 //This component handles the Info section
-import React, {PropTypes, Component}   from 'react';
-import { Link } from 'react-router'
+import React, {PropTypes, Component}   from "react";
+import {Link} from "react-router";
+import {checkList} from "../../actions/checklistActions";
+import CheckListForm from './CheckListForm';
 
-class CheckList extends React.Component{
-	constructor(props){
-		super(props)
-		this.state = {
-			jobs: null,
-			services: null
-		}
-	}
 
-	handleChange(e) {
-		if(e.target.checked) {
-			this.setState({[e.target.name]:!e.target.checked})
-		} else {
-			this.setState({[e.target.name]: e.target.checked})
-		}
-		console.log(e.target.name + ':' + e.target.checked)
+class CheckList extends Component {
+
+	// handleChange(e) {
+    //
+    //
+	// 	if (e.target.checked) {
+	// 		!e.target.checked;
+    //
+    //
+	// 	} else {
+	// 		e.target.checked;
+    //
+	// 	}
+	// 	let item = e.target.name;
+	// 	this.setState({[item] : e.target.checked});
+    //
+	// 	console.log('item',item);
+	// 	consoel.log('value',e.target.checked)
+    //
+	// }
+	handleSubmit(values) {
+		console.log('form values',values);
+		this.props.actions.checkList({type: 'CHECKLIST', payload: this.state.checklist})
 	}
 	render() {
+		// const { handleSubmit } = this.props;
 		return (
 			<div id="info" className="contact-form col-md-3">
+<<<<<<< HEAD
 				<h2>Hey! How may we help you today?</h2>
 				<form >
 					<p>
@@ -45,20 +57,23 @@ class CheckList extends React.Component{
 					<form className="col s12">
 						<div className="row">
 							<div className="input-field col s12">
-								<input id="email" type="email" className="validate"/>
-									<label htmlFor="email" data-error="wrong" data-success="right">Zip Code</label>
+								<input id="zip" type="zip" name="zip" className="validate"
+									   onChange={this.props.handleChange}/>
+								<label htmlFor="zip" data-error="wrong" data-success="right">Zip Code</label>
 							</div>
 						</div>
 					</form>
 				</div>
-				<button><Link to="steps">Next</Link></button>
+				<button onClick={this.props.handleSelected}><Link to="/steps">Next</Link></button>
 			</div>
 		);
 	}
-	}
+}
 
 CheckList.propTypes = {
-
+	handleSelected : PropTypes.func,
+	handleChange: PropTypes.func
 };
+
 
 export default CheckList;

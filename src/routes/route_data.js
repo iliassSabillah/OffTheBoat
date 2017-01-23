@@ -1,10 +1,10 @@
 import configureStore from '../store/configureStore';
-import {fetchUser} from '../actions/stepActions';
+import {checkList} from '../actions/checklistActions';
 
 
 
 let store = configureStore();
 
-export  function onUsersEnter() {
-	store.dispatch(fetchUser());
+export  function onCheckList() {
+	store.dispatch(checkList());
 }

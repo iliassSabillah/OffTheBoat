@@ -23,6 +23,7 @@ const Maps = React.createClass({
 
 	render() {
 		return (
+
 			 <iframe
 			  id="map"
 			  width="600"
@@ -35,3 +36,4 @@ const Maps = React.createClass({
 });
 
 export default Maps;
+
