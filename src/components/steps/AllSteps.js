@@ -4,7 +4,7 @@ import Step from './step';
 const AllSteps = React.createClass({
 	componentWillMount() {
 		this.props.actions.fetchNycId()
-		this.props.actions.fetchJobs()
+		// this.props.actions.fetchJobs()
 		this.props.actions.fetchHousing()
 
 	},

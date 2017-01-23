@@ -11,7 +11,7 @@ import StepContainer from '../components/steps/StepContainer';
 export default (
 	<Route path="/" component={App}>
 		<IndexRoute component ={HomePage}/>
-		<Route path="checklist" component ={CheckListContainer} onEnter={onCheckList} />
+		<Route path="checklist" component ={CheckListContainer} />
 		<Route path ="/steps" component={StepContainer}/>
 		<Route path ="/about" component={AboutPage}/>
 	</Route>
