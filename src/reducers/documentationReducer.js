@@ -12,6 +12,7 @@ export default function documentationReducer(state= INITIAL_STATE, action){
 					address: doc.address1,
 					city: doc.city,
 					hours: doc.hours,
+					phone: doc.phone_number,
 					zip: doc.zip
 				}
 			}));

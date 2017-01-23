@@ -10,7 +10,9 @@ class HomePage extends React.Component {
 		console.log('home page props',this.props.state);
 		return (
 			<div className="container-fluid">
-				{this.props.children}
+				<div id='body'>
+					{this.props.children}
+				</div>
 			</div>
 		);
 	}

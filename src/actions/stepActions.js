@@ -83,7 +83,7 @@ export function fetchTraining() {
 
 	return (dispatch)=>{
 		request.then((data)=>{
-			dispatch({type: 'FETCH_TRAINING', payload: data});
+			dispatch({type: 'FETCH_TRAINING', payload: data.programs});
 			// console.log('data dispatch',data)
 		});
 	};

@@ -45,6 +45,7 @@ const Header = (props)=> {
 					</div>
 				</div>
 			</nav>
+			<div id="google_translate_element"></div>
 			<div className="sectionNav">
 				<ul className="nav nav-pills center">
 					<li><IndexLink to="/">CheckList</IndexLink></li>
@@ -58,5 +59,3 @@ Header.propTypes = {
 };
 
 export default Header;
-
-
