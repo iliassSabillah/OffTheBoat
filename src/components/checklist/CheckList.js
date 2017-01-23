@@ -33,7 +33,6 @@ class CheckList extends Component {
 		// const { handleSubmit } = this.props;
 		return (
 			<div id="info" className="contact-form col-md-3">
-<<<<<<< HEAD
 				<h2>Hey! How may we help you today?</h2>
 				<form >
 					<p>

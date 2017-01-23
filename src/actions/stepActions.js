@@ -1,6 +1,6 @@
 //Info actions creator
-// import * as types from './actionTypes';
-import $ from 'jquery';
+import * as types from './actionTypes';
+import axios from 'axios';
 
 
 export function fetchNycId() {
