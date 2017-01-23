@@ -9,7 +9,7 @@ import configureStore from './store/configureStore';
 
 import './styles/styles.css'; //Webpack can import CSS files too
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import {fetchNycId} from './actions/stepActions';
+import {fetchNycId, fetchJobs, fetchHousing, fetchTraining} from './actions/stepActions';
 
 const store = configureStore();
 
@@ -25,4 +25,5 @@ render (
 	document.getElementById('root')
 );
 
-store.dispatch(fetchNycId());
+// store.dispatch(fetchJobs());
+// fetchJobs()

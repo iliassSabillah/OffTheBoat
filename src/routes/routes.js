@@ -12,7 +12,7 @@ export default (
 	<Route path="/" component={App}>
 		<IndexRoute component ={HomePage}/>
 		<Route path="checklist" component ={CheckListContainer} />
-		<Route path ="/steps" component={StepContainer}/>
-		<Route path ="/about" component={AboutPage}/>
+		<Route path ="steps" component={StepContainer} />
+		<Route path ="about" component={AboutPage}/>
 	</Route>
 );
