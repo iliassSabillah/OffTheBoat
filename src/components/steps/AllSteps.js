@@ -1,24 +1,26 @@
 import React from 'react';
-import Step from './step';
+import DocumentStep from './document-step';
+import HousingStep from './housing-step';
+import JobStep from './job-step';
+import ServicesStep from './services-step';
 
 const AllSteps = React.createClass({
-	componentWillMount() {
-		console.log('ACTION FIRED!!!')
-		this.props.actions.fetchNycId()
-		this.props.actions.fetchJobs()
-		this.props.actions.fetchHousing()
-
-	},
-	render() {
-		return(
-			<ul className="collapsible popout" data-collapsible="accordion">
-				<Step data={this.props.docs} text={'Documents'} />
-				<Step  text={'Government Services'} />
-				<Step data={this.props.jobs} jobs={this.props.actions} text={'Jobs'} />
-				<Step housing={this.props.actions} text={'Housing'} />
-			</ul>
-		);
-	}
+  componentDidMount() {
+    this.props.actions.fetchNycId()
+    this.props.actions.fetchJobs()
+    this.props.actions.fetchHousing()
+    this.props.actions.fetchTraining()
+  },
+  render() {
+      return(
+        <ul className="collapsible popout" data-collapsible="accordion">
+          <DocumentStep docs={this.props.docs} text={'Documents'} />
+          <HousingStep housing={this.props.housing} text={'Housing'} />
+          <JobStep jobs={this.props.job} text={'Jobs'} />
+          <ServicesStep service={this.props.training} text={'Training Services'} />
+        </ul>
+      );
+  }
 });
 
 export default AllSteps;

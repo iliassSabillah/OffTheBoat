@@ -4,6 +4,7 @@
 
 const INITIAL_STATE = {jobs: false, housing: false, documents: false, services: false, zip: null};
 
+
 export default function checklistReducer(state= INITIAL_STATE, action){
 	switch(action.type){
 		case "CHECKLIST":

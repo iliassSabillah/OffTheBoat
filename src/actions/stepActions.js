@@ -1,6 +1,6 @@
 //Info actions creator
-// import * as types from './actionTypes';
-import $ from 'jquery';
+import * as types from './actionTypes';
+import axios from 'axios';
 
 
 export function fetchNycId() {
@@ -83,7 +83,7 @@ export function fetchTraining() {
 
 	return (dispatch)=>{
 		request.then((data)=>{
-			dispatch({type: 'FETCH_TRAINING', payload: data});
+			dispatch({type: 'FETCH_TRAINING', payload: data.programs});
 			// console.log('data dispatch',data)
 		});
 	};

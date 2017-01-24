@@ -8,6 +8,16 @@
 
 }
 
+#body {
+	display: flex;
+	justify-content: center;
+}
+
+label > span {
+	font-size: 20px;
+	color: mintGreen;
+}
+
 .homeImage {
 	width:100%;
 }
