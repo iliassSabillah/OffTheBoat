@@ -1,36 +1,44 @@
+
 //This component handles the Info section
-import React, {PropTypes, Component}   from "react";
+import React, {PropTypes, Component}   from 'react';
 import {Link} from "react-router";
-import {checkList} from "../../actions/checklistActions";
-import CheckListForm from './CheckListForm';
 
 
-class CheckList extends Component {
-
-	// handleChange(e) {
-    //
-    //
-	// 	if (e.target.checked) {
-	// 		!e.target.checked;
-    //
-    //
-	// 	} else {
-	// 		e.target.checked;
-    //
-	// 	}
-	// 	let item = e.target.name;
-	// 	this.setState({[item] : e.target.checked});
-    //
-	// 	console.log('item',item);
-	// 	consoel.log('value',e.target.checked)
-    //
-	// }
-	handleSubmit(values) {
-		console.log('form values',values);
-		this.props.actions.checkList({type: 'CHECKLIST', payload: this.state.checklist})
-	}
+const CheckList = React.createClass({
+	getInitialState(){
+		return {
+			state: {
+				jobs: false,
+				housing: false,
+				documents: false,
+				services: false,
+				zip: null
+			}
+		}
+	},
+	handleChange(e) {
+		console.log('name', e.target.name);
+		console.log('bool', e.target.checked)
+		if (e.target.checked) {
+			!e.target.checked
+		} else {
+			e.target.checked
+		}
+		let name = e.target.name;
+		let value = e.target.checked;
+		// this.props.actions.checkList({type: 'CHECKLIST', payload: {[name] : e.target.checked}})
+		// let info= {jobs: false, housing: false, documents: false, services: false, zip: null}
+		// info[name] = e.target.checked;
+		// console.log(info);
+		this.setState({[name]: value})
+	},
+	handleSelected(values) {
+		console.log('form values', values);
+		let payload = this.state
+		this.props.actions.checkList({type: 'CHECKLIST', payload})
+	},
 	render() {
-		// const { handleSubmit } = this.props;
+		console.log('checklist props', this.props);
 		return (
 			<div id="info" className="contact-form col-md-3">
 				<h2>Hey! How may we help you today?</h2>
@@ -56,9 +64,8 @@ class CheckList extends Component {
 					<form className="col s12">
 						<div className="row">
 							<div className="input-field col s12">
-								<input id="zip" type="zip" name="zip" className="validate"
-									   onChange={this.props.handleChange}/>
-								<label htmlFor="zip" data-error="wrong" data-success="right">Zip Code</label>
+								<input id="email" type="email" className="validate"/>
+								<label htmlFor="email" data-error="wrong" data-success="right">Email</label>
 							</div>
 						</div>
 					</form>
@@ -67,12 +74,6 @@ class CheckList extends Component {
 			</div>
 		);
 	}
-}
-
-CheckList.propTypes = {
-	handleSelected : PropTypes.func,
-	handleChange: PropTypes.func
-};
-
+})
 
 export default CheckList;

@@ -3,6 +3,6 @@
 import $ from 'jquery';
 
 
-export function checkList(data) {
-	return {type: 'CHECKLIST', payload: data};
+export function checkList(payload) {
+	return {type: 'CHECKLIST', payload};
 }
