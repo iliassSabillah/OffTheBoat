@@ -7,44 +7,56 @@ body {
 	margin: 0;
 
 }
+
 #root {
 	font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	color: #4d4d4d;
-	min-width: 400px;
-	max-width: 100%;
 	margin: 0 auto;
+	background-color: white;
+	color: black;
+}
+
+/*top navigation styles */
+
+.navbar {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-items: flex-end;
+	align-items: center;
+	background-color:  darksalmon;
+	margin-top: 5px;
+}
+
+.navbar li {
+	flex: 1;
+	align-content: center;
+}
+
+.navbar  li:nth-child(4)>input , li:nth-child(5)>input {
+	background-color: darkslateblue;
 
 }
 
+/*google translate styles*/
+
 #google_translate_element {
-	background-color: antiquewhite;
+	background-color: black;
+	z-index: 10000;
 }
 
 .goog-te-gadget-simple {
-	background-color: transparent!important;
-	border-style: none!important;
+	background-color: black!important;
 }
 
-.goog-te-gadget img {
-	display: none;
-}
+/*home page styles*/
 
 #homepage {
 	display: flex;
 	justify-content: center;
 }
 
-label > span {
-	font-size: 20px;
-	color: mintGreen;
-}
-.heading {
-	display: flex;
-	justify-content: center;
-}
-
 .homeImage {
-	position: relative;
+	width: 100%;
+	height: 500px;
 }
 
 .title {
@@ -52,5 +64,14 @@ label > span {
 	font-weight: 500;
 	font-size: 20px;
 	position: absolute;
-
 }
+
+
+
+
+label > span {
+	font-size: 20px;
+	color: black;
+}
+
+
