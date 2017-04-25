@@ -35,7 +35,7 @@ export function fetchJobs() {
 		success: function(data) {
 				console.log('data', data.programs)
 			}
-		})
+		});
 
 	return (dispatch)=>{
 		request.then((data)=>{

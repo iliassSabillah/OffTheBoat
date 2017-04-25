@@ -10,7 +10,7 @@ const session = require('express-session');
 
 /* eslint-disable no-console */
 
-const port = 5000;
+const port = 3000;
 const app = express();
 const compiler = webpack(config);
 
@@ -48,9 +48,8 @@ app.use(session({
 	resave: true,
 	saveUninitialized: true,
 	cookie: { secure: true }
-}))
+}));
 
-app.use('/api/users', require('../apiRoutes/index').userRouter);
 
 app.get('/*', (req, res)=> {
 	res.sendFile(path.join( __dirname, '../src/index.html'));

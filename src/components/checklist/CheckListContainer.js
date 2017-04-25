@@ -6,17 +6,16 @@ import {bindActionCreators} from 'redux';
 import {checkList} from '../../actions/checklistActions';
 import CheckList from './CheckList';
 
-class CheckListContainer extends Component {
-	constructor(props, context) {
-		super(props, context);
-		// this.state = {
-		// 		jobs: false,
-		// 		housing: false,
-		// 		documents: false,
-		// 		services: false,
-		// 		zip: null
-		// }
 
+class CheckListContainer extends Component{
+	constructor(){
+		super(prop);
+		this.state = {
+			checklist: {
+				document: '',
+				id: ''
+			}
+		}
 	}
 }
 

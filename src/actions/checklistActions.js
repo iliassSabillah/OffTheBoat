@@ -4,5 +4,5 @@ import $ from 'jquery';
 
 
 export function checkList(payload) {
-	return {type: 'CHECKLIST', payload};
+	return {type: 'CHECKLIST', payload: payload};
 }

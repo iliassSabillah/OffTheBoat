@@ -18,13 +18,13 @@ const JobStep = React.createClass({
     })
   },
   render() {
-    console.log(this.props)
+    console.log('job stop', this.props);
     return (
       <li>
         <div className="collapsible-header"><i className="material-icons">filter_drama</i>{this.props.text}</div>
         <div className="collapsible-body">
           <Maps />
-          <p>{this.displayJob()}</p>
+          <ul>{this.displayJob()}</ul>
         </div>
       </li>
     );

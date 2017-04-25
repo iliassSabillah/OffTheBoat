@@ -1,20 +1,25 @@
 
 //This component handles the Info section
 import React, {PropTypes, Component}   from 'react';
-import {Link} from "react-router";
+import {browserHistory, Link } from 'react-router';
+// import {checkList} from '../../actions/checklistActions';
 
 
 const CheckList = React.createClass({
-	getInitialState(){
-		return {
-			state: {
-				jobs: false,
-				housing: false,
-				documents: false,
-				services: false,
-				zip: null
-			}
-		}
+	// getInitialState(){
+	// 	return {
+	// 		state: {
+	// 			jobs: false,
+	// 			housing: false,
+	// 			documents: false,
+	// 			services: false,
+	// 			zip: null
+	// 		}
+	// 	}
+	// },
+	componentDidMount() {
+		console.log('checklist props',this.props);
+		this.props.actions.checkList(this.state)
 	},
 	handleChange(e) {
 		console.log('name', e.target.name);
@@ -26,19 +31,21 @@ const CheckList = React.createClass({
 		}
 		let name = e.target.name;
 		let value = e.target.checked;
-		// this.props.actions.checkList({type: 'CHECKLIST', payload: {[name] : e.target.checked}})
+		this.setState({[name] : value});
+		// this.props.actions.checkList({type: 'CHECKLIST', payload: this.state});
 		// let info= {jobs: false, housing: false, documents: false, services: false, zip: null}
 		// info[name] = e.target.checked;
 		// console.log(info);
-		this.setState({[name]: value})
+		// this.setState({[name]: value})
 	},
 	handleSelected(values) {
 		console.log('form values', values);
-		let payload = this.state
-		this.props.actions.checkList({type: 'CHECKLIST', payload})
+		let payload = this.state;
+		console.log('payload',payload);
+		// checkList({type: 'CHECKLIST', payload});
+		// browserHistory.push('../steps')
 	},
 	render() {
-		console.log('checklist props', this.props);
 		return (
 			<div id="info" className="contact-form col-md-3">
 				<h2>Hey! How may we help you today?</h2>
@@ -70,10 +77,16 @@ const CheckList = React.createClass({
 						</div>
 					</form>
 				</div>
-				<button onClick={this.props.handleSelected}><Link to="/steps">Next</Link></button>
+				<button onClick={this.handleSelected}><Link to="/steps">Next</Link></button>
 			</div>
 		);
 	}
-})
+});
+
+
+CheckList.propTypes = {
+	handleSelected: PropTypes.func
+};
+
 
 export default CheckList;

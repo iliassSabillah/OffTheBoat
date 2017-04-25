@@ -12,7 +12,6 @@ const mapStateToProps = (state) => ({
 	housing: state.housingReducer,
 	training: state.trainingReducer,
 	job: state.jobReducer,
-	checklist: state.checklistReducer,
 	docs: state.documentationReducer
 });
 

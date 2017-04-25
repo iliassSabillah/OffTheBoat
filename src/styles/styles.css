@@ -1,4 +1,12 @@
 /* Styles */
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+
+}
 #root {
 	font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: #4d4d4d;
@@ -8,7 +16,20 @@
 
 }
 
-#body {
+#google_translate_element {
+	background-color: antiquewhite;
+}
+
+.goog-te-gadget-simple {
+	background-color: transparent!important;
+	border-style: none!important;
+}
+
+.goog-te-gadget img {
+	display: none;
+}
+
+#homepage {
 	display: flex;
 	justify-content: center;
 }
@@ -17,11 +38,19 @@ label > span {
 	font-size: 20px;
 	color: mintGreen;
 }
+.heading {
+	display: flex;
+	justify-content: center;
+}
 
 .homeImage {
-	width:100%;
+	position: relative;
 }
 
 .title {
+	z-index: 3;
+	font-weight: 500;
+	font-size: 20px;
 	position: absolute;
+
 }

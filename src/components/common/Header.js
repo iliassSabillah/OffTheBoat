@@ -9,9 +9,8 @@ const Header = (props) => {
 	});
 	return (
 		<div>
-			<div id="google_translate_element"></div>
+
 			<nav className="navbar navbar-default">
-				<div className="container-fluid">
 					<div className="navbar-header">
 						<button type="button" className="navbar-toggle collapsed">
 							<span className="sr-only">Toggle navigation</span>
@@ -29,7 +28,6 @@ const Header = (props) => {
 							<li><Link to="about">About</Link></li>
 						</ul>
 						<ul className="nav navbar-nav navbar-right">
-							<form className="form-inline">
 								<div className="form-group">
 									<input style={{marginTop: 10 + 'px'}} type="email" className="form-control"
 										   id="email" placeholder="Enter email"/>
@@ -38,16 +36,16 @@ const Header = (props) => {
 									<input style={{marginTop: 10 + 'px'}} type="password" className="form-control"
 										   id="password" placeholder="Password"/>
 								</div>
-								<ul className="nav navbar-nav navbar-right">
+								<ul className="nav-signin">
 									<li>
-										<button className="btn btn-outline-primary" href="#">Sign Up</button>
+										<button className="signup" href="#">Sign Up</button>
 									</li>
-									<li><input className="btn btn-outline-primary" type="submit" value="Sign In"/></li>
+									<li>
+										<button className="signin" type="submit">Sign In</button>
+									</li>
 								</ul>
-							</form>
 						</ul>
 					</div>
-				</div>
 			</nav>
 			<div id="google_translate_element"></div>
 			<div className="sectionNav">
